@@ -58,7 +58,7 @@ const Paste = () => {
                   <div className="flex flex-col gap-y-4 sm:items-end">
                     <div className="flex gap-2 flex-wrap sm:flex-nowrap">
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-blue-500"
+                        className="btn-icon hover:border-blue-500"
                         // onClick={() => toast.error("Not working")}
                       >
                         <NavLink to={`/?pasteId=${paste?._id}`}>
@@ -69,7 +69,7 @@ const Paste = () => {
                         </NavLink>
                       </button>
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-pink-500"
+                        className="btn-icon hover:border-pink-500"
                         onClick={() => handleDelete(paste?._id)}
                       >
                         <Trash2
@@ -78,7 +78,7 @@ const Paste = () => {
                         />
                       </button>
 
-                      <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-orange-500">
+                      <button className="btn-icon hover:border-orange-500">
                         <NavLink to={`/pastes/${paste?._id}`} target="_blank">
                           <Eye
                             className="text-black group-hover:text-orange-500"
@@ -87,7 +87,7 @@ const Paste = () => {
                         </NavLink>
                       </button>
                       <button
-                        className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-green-500"
+                        className="btn-icon hover:border-green-500"
                         onClick={() => {
                           navigator.clipboard.writeText(paste?.content);
                           toast.success("Copied to Clipboard");
